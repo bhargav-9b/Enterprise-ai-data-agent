@@ -1,0 +1,10 @@
+﻿.env
+gemini_test.env
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+sales.db
+*.mhtml
+permission_test.txt
+plain text.txt
