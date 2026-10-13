@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-
+from fastapi.responses import FileResponse
 from contextlib import asynccontextmanager
 
 import pandas as pd
@@ -65,11 +65,9 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-
-@app.get("/")
+@app.get("/", include_in_schema=False)
 def home():
-    return {"message": "Enterprise AI Data Analysis Agent API is running"}
-
+    return FileResponse("index.html")
 
 @app.get("/sales")
 def get_sales(db: Session = Depends(get_db)):
@@ -161,4 +159,4 @@ def ask_question(request: AskRequest):
             detail="Failed to process the question. Check the server logs.",
         ) from error
 
-        
+
