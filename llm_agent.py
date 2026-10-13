@@ -70,7 +70,7 @@ def ask_agent(question: str) -> str:
     except Exception as error:
         print(f"Gemini temporarily unavailable: {error}")
         return "Local Python result: " + local_answer()
-        
+
 if __name__ == "__main__":
     print("Enterprise AI Data Analysis Agent")
     print("Type 'exit' to stop.")
