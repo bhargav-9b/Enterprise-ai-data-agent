@@ -1,5 +1,4 @@
 
-@'
 # Enterprise AI Data Analysis Agent
 
 An AI-powered sales data analysis application built with Python, FastAPI, SQLite, SQLAlchemy, and Google Gemini.
